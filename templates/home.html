@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Manage Schools</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../static/js/scripts.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h2>Schools Management</h2>
+        <button id="addSchoolButton" class="add-button">Add New School</button>
+    </div>
+    <div class="form-container">
+        <div class="graphContainer">
+            <h3>Progress Chart</h3>
+            <div class="graphInnerContainer">
+                <div>
+                    <h5>Pie Chart</h5>
+                    <canvas id="progressChart" width="400" height="300"></canvas>
+                </div>
+                <div>
+                    <h5>Bar Chart</h5>
+                    <canvas id="barChart" width="400" height="300"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="schoolsList-heading">Schools List</h3>
+        <ul id="schoolsList">
+            <!-- school list -->
+        </ul>
+
+        <p id="message"></p>
+    </div>
+
+    <!-- Add School Modal -->
+    <div id="addSchoolModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="addModalClose">&times;</span>
+            <h3>Add New School</h3>
+            <form id="addSchoolForm">
+                <input type="text" id="addSchoolName" placeholder="School Name" required>
+                <input type="text" id="addSchoolAddress" placeholder="School Address" required>
+                <button type="submit">Add School</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Update School Modal -->
+    <div id="updateSchoolModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="updateModalClose">&times;</span>
+            <h3>Update School</h3>
+            <form id="updateSchoolForm">
+                <input type="hidden" id="updateSchoolId">
+                <input type="text" id="updateSchoolName" placeholder="New School Name" required>
+                <input type="text" id="updateSchoolAddress" placeholder="New School Address" required>
+                <button type="submit">Update School</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../static/js/scripts.js"></script>
+</body>
+</html>
+

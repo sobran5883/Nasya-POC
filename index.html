@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our Application</title>
+    <meta name="description" content="A web application offering features like login and registration for personalized access.">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="icon" href="static/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>Welcome to Our Web Application</h2>
+        </header>
+    
+        <main>
+            <p>Discover the features of our application. Please log in or register to continue.</p>
+            <div class="buttons">
+                <button onclick="window.location.href='templates/login.html'">Login</button>
+                <button onclick="window.location.href='templates/register.html'">Register</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Include jQuery from local path -->
+    <script src="static/js/jquery-3.7.1.min.js"></script>
+    <!-- Include custom JS script after jQuery -->
+    <script src="static/js/scripts.js" defer></script>
+</body>
+</html>
