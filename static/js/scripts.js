@@ -102,7 +102,6 @@ $(document).ready(function () {
                         const listItem = $(`
                             <li class="schoolCard">
                                 <div class="schoolDetails">
-                                    <span><strong>ID:</strong> ${school.id}</span>
                                     <span><strong>Name:</strong> ${school.name}</span>
                                     <span><strong>Address:</strong> ${school.address}</span>
                                 </div>
@@ -214,38 +213,6 @@ $(document).ready(function () {
     });
     
 });
-
-
-
-// $(document).ready(function () {
-//     $.ajax({
-//         url: "../cgi-bin/api.py",
-//         method: "GET",
-//         data: { action: "progress" },
-//         success: function (response) {
-//             if (response.status === "success") {
-//                 const data = response.data;
-//                 const ctx = document.getElementById("progressChart").getContext("2d");
-//                 new Chart(ctx, {
-//                     type: "pie",
-//                     data: {
-//                         labels: ["Users", "Schools"],
-//                         datasets: [{
-//                             data: [data.users, data.schools],
-//                             backgroundColor: ["#4CAF50", "#FF5722"],
-//                             hoverBackgroundColor: ["#66BB6A", "#FF7043"]
-//                         }]
-//                     }
-//                 });
-//             } else {
-//                 console.error("API Error:", response.message);
-//             }
-//         },
-//         error: function (xhr, status, error) {
-//             console.error("AJAX Error:", status, error);
-//         }
-//     });
-// });
 
 $(document).ready(function () {
     $.ajax({
