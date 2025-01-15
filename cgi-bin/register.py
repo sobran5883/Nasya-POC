@@ -11,7 +11,6 @@ password = form.getvalue("password")
 conn = sqlite3.connect('users.db')
 cursor = conn.cursor()
 
-# Insert user into database
 try:
     cursor.execute("INSERT INTO users (username, password) VALUES (?, ?)", (username, password))
     conn.commit()

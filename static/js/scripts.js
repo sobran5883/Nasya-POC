@@ -214,6 +214,7 @@ $(document).ready(function () {
     
 });
 
+//for progress charts
 $(document).ready(function () {
     $.ajax({
         url: "../cgi-bin/api.py",
@@ -237,8 +238,8 @@ $(document).ready(function () {
                     },
                     options: {
                         responsive: true,
-                        maintainAspectRatio: true, // Keeps the aspect ratio
-                        aspectRatio: 2, // Reduces height relative to width
+                        maintainAspectRatio: true,
+                        aspectRatio: 2,
                     }
                 });
                 

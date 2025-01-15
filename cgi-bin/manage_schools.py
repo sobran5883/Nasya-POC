@@ -12,7 +12,6 @@ conn = sqlite3.connect('users.db')
 cursor = conn.cursor()
 try:
     if action == "add":
-        # Add a new school
         name = form.getvalue("name")
         address = form.getvalue("address")
         if not name or not address:
@@ -22,7 +21,6 @@ try:
         response = {"status": "success", "message": "School added successfully"}
 
     elif action == "update":
-        # Update school details
         school_id = form.getvalue("id")
         new_name = form.getvalue("name")
         new_address = form.getvalue("address")
@@ -38,17 +36,14 @@ try:
         response = {"status": "success", "message": "School details updated successfully"}
 
     elif action == "list":
-        # Fetch all schools
         cursor.execute("SELECT * FROM schools")
         schools = cursor.fetchall()
-        # Convert to a list of dictionaries for better compatibility
         response = {
             "status": "success",
             "schools": [{"id": row[0], "name": row[1], "address": row[2]} for row in schools]
         }
         
     elif action == "delete":
-        # Delete a school by ID
         school_id = form.getvalue("id")
         if not school_id:
             raise ValueError("School ID is required.")
